@@ -3,54 +3,29 @@
 const services = [
   {
     id: "01",
-    title: "Landing Pages",
-    desc: "High-converting landing pages designed to maximize clicks, leads, and sales",
+    title: "Web Development",
+    desc: "Custom, fast, and responsive websites built with modern technologies",
   },
   {
     id: "02",
-    title: "5-Page Website",
-    desc: "Fast, mobile-friendly websites built to generate leads and grow your business",
+    title: "SaaS Development",
+    desc: "Feature-rich scalable platforms with robust architecture and custom UI",
   },
   {
     id: "03",
-    title: "Portfolio Website",
-    desc: "Showcase your work with stunning animations and bespoke editorial layouts",
-  },
-  {
-    id: "04",
-    title: "SaaS Website",
-    desc: "Feature-rich marketing sites with pricing tables, demos, and auth UI",
-  },
-  {
-    id: "05",
     title: "MVP Development",
     desc: "Turn your idea into a working product with scalable and clean architecture",
   },
   {
-    id: "06",
-    title: "Website Redesign",
+    id: "04",
+    title: "Backend Development",
+    desc: "Robust APIs, database design, and server-side logic for your applications",
+  },
+  {
+    id: "05",
+    title: "Web Redesign",
     desc: "Improve your existing website with better design, speed, and user experience",
-  },
-  {
-    id: "07",
-    title: "Shopify Website",
-    desc: "Custom Shopify themes with product setup, payments, and shipping config",
-  },
-  {
-    id: "08",
-    title: "E-Commerce Website",
-    desc: "Build custom stores with smooth checkout, inventory, and payment integration",
-  },
-  {
-    id: "09",
-    title: "Error Solving & Bugs",
-    desc: "Diagnose and fix codebase issues, performance problems, and dependency upgrades",
-  },
-  {
-    id: "10",
-    title: "Maintenance & Support",
-    desc: "Ongoing website updates, security patches, backups, and performance monitoring",
-  },
+  }
 ];
 
 /* ──────────────────────────────────────────────

@@ -198,6 +198,8 @@ function FounderCard({
 
 /* ── Main Section ── */
 export default function AboutIntro() {
+  const detailsRef = useRef<HTMLDivElement>(null);
+
   return (
     <section id="about" className="w-full flex-col items-center px-4 py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-[1400px] w-full mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 relative z-10">
@@ -208,14 +210,27 @@ export default function AboutIntro() {
         </div>
 
         {/* Right Side: Details */}
-        <div className="md:col-span-4 flex flex-col justify-between pt-4 sm:pt-8 md:pt-4">
-          <p className="text-black/70 dark:text-white/70 text-sm md:text-base leading-relaxed mb-8 sm:mb-12 transition-colors duration-300">
-            I&apos;m Arham Chhajed, a web developer and freelancer focused on building fast, practical websites and web apps that solve real problems. I work with startups, local businesses, and founders to create scalable, easy-to-manage digital products.
-            <br/><br/>
-            I understand how to build systems that handle real users, payments, and growth. I enjoy working on ideas that have real-world impact.
-            <br/><br/>
-            I&apos;m always open to discussing new projects or collaborations.
-          </p>
+        <div className="md:col-span-4 flex flex-col justify-between pt-4 sm:pt-8 md:pt-4 relative" ref={detailsRef}>
+          <div className="text-black/70 dark:text-white/70 text-sm md:text-base leading-relaxed mb-8 sm:mb-12 transition-colors duration-300">
+            <VariableProximity
+              label="I'm Arham Chhajed. I build software and I'm currently focused on Undesk, a CRM built entirely for Indian businesses and freelancers. I designed it with WhatsApp-first workflows because that's how client conversations actually happen here, instead of forcing tools built for US sales teams."
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={detailsRef}
+              radius={100}
+              falloff="linear"
+              className="mb-8 block"
+            /><br /><br />
+            <VariableProximity
+              label="I also founded InterJob to help Indian freelancers who lose too much of their earnings to unfair commission structures. I'm currently doing a diploma in AI alongside this work, and I'm always happy to chat about startups, marketplace economics, or building tech for India."
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={detailsRef}
+              radius={100}
+              falloff="linear"
+              className="block"
+            />
+          </div>
 
           <div className="space-y-6">
             <h3 className="text-black dark:text-white font-mono text-xs uppercase tracking-widest border-b border-black/10 dark:border-white/20 pb-2 transition-colors duration-300">
@@ -233,6 +248,8 @@ export default function AboutIntro() {
     </section>
   );
 }
+
+import VariableProximity from "@/components/ui/VariableProximity";
 
 /* ── Scroll Reveal Text Components ── */
 function ScrollRevealText() {

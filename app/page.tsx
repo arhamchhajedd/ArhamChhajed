@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutIntro from "@/components/AboutIntro";
+import LogoStrip from "@/components/LogoStrip";
 import Projects from "@/components/Projects";
 import FAQSection from "@/components/FAQSection";
 import Testimonials from "@/components/Testimonials";
@@ -16,11 +17,12 @@ export default function Home() {
       <main className="min-h-screen">
         <Header />
         <Hero />
+        <Reveal><LogoStrip /></Reveal>
         <Reveal><AboutIntro /></Reveal>
         <Reveal delay={100}><WhyMe /></Reveal>
         <Reveal delay={100}><Projects /></Reveal>
         <Reveal delay={100}><FAQSection /></Reveal>
-        <Reveal delay={100}><Testimonials /></Reveal>
+        {/* <Reveal delay={100}><Testimonials /></Reveal> */}
         <Reveal delay={100}><Contact /></Reveal>
         <Reveal delay={100}><Footer /></Reveal>
       </main>

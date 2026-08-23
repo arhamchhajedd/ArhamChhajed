@@ -16,8 +16,6 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               {[
                 { label: "WORK", href: "#portfolio" },
-                { label: "PRIVACY POLICY", href: "/privacy" },
-                { label: "TERMS OF SERVICE", href: "/terms" },
                 { label: "FAQ", href: "/faq" },
               ].map((link) => (
                 <Link
@@ -35,7 +33,7 @@ export default function Footer() {
               {[
                 { label: "GITHUB", href: "https://github.com/ArhamChhajedd" },
                 { label: "LINKEDIN", href: "https://www.linkedin.com/in/arhamchhajed" },
-                { label: "INSTAGRAM", href: "https://www.instagram.com/arhamchhajed" },
+                { label: "INSTAGRAM", href: "https://www.instagram.com/v5arham" },
               ].map((link) => (
                 <a
                   key={link.label}
@@ -56,11 +54,11 @@ export default function Footer() {
               Reach out anytime
             </span>
             <a
-              href="mailto:hello@arhamchhajed.com"
+              href="mailto:arham@undesk.in"
               className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight hover:text-red-500 transition-colors duration-500 break-all md:break-normal"
               style={{ fontFamily: "var(--font-geist-sans)" }}
             >
-              hello@arhamchhajed.com
+              arham@undesk.in
             </a>
           </div>
         </div>

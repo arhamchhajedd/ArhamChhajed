@@ -15,30 +15,30 @@ const SERVICES = [
   },
   {
     id: "02",
-    title: "UI/UX Design",
-    description: "Intuitive, user-centered designs that provide engaging and seamless digital experiences for your audience.",
+    title: "SaaS Development",
+    description: "Feature-rich software as a service platforms with scalable architecture and custom UI.",
     image:
       "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
   },
   {
     id: "03",
-    title: "E-Commerce Solutions",
+    title: "MVP Development",
     description:
-      "Robust online stores with secure payment gateways and smooth checkout flows to maximize your sales.",
+      "Turn your idea into a working product quickly with scalable and clean architecture.",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
   },
   {
     id: "04",
-    title: "Website Redesign",
-    description: "Revamp your outdated website with a fresh, modern look, improved performance, and better conversions.",
+    title: "Backend Development",
+    description: "Robust APIs, database design, and server-side logic to power your applications securely.",
     image:
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200",
   },
   {
     id: "05",
-    title: "Maintenance & Support",
-    description: "Ongoing updates, bug fixes, and performance optimization to keep your digital presence running smoothly.",
+    title: "Web Redesign",
+    description: "Revamp your outdated website with a fresh, modern look, improved performance, and better conversions.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
   },

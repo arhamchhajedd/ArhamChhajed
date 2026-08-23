@@ -43,7 +43,7 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
     { label: "Services", id: "why-me", Icon: Wrench },
     { label: "Work", id: "portfolio", Icon: Briefcase },
     { label: "FAQ", id: "faqs", Icon: HelpCircle },
-    { label: "Clients", id: "testimonials", Icon: Star },
+    // { label: "Clients", id: "testimonials", Icon: Star },
     { label: "Contact", id: "contact", Icon: Mail }
   ];
 
