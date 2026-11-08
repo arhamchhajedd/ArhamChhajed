@@ -1,13 +1,58 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Rocket, LayoutTemplate, Briefcase, Cloud, CodeXml, RefreshCcw, Wrench, ShoppingBag, ShoppingCart, MessageCircle } from "lucide-react";
+import { Check, Rocket, LayoutTemplate, Briefcase, CodeXml, RefreshCcw, Wrench, ShoppingCart, MessageCircle, GraduationCap, Cpu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 const PACKAGES = [
   {
     id: "01",
+    title: "1-on-1 Tutoring & Vibe Coding",
+    icon: <GraduationCap className="w-6 h-6" />,
+    description: "Personalized mentorship in vibe coding, modern AI developer tools (Cursor, Claude), Next.js, and shipping real software at 10x speed.",
+    price: "Flexible Hourly / Retainer",
+    features: [
+      "Live 1-on-1 Hands-On Sessions",
+      "Master Vibe Coding & AI Tooling",
+      "Build Real-World Projects From Scratch",
+      "Code Reviews & Architecture Advice"
+    ],
+    highlight: true,
+    colSpan: "md:col-span-1 lg:col-span-1",
+  },
+  {
+    id: "02",
+    title: "Custom Software & IT Solutions",
+    icon: <Cpu className="w-6 h-6" />,
+    description: "Bespoke software systems, backend APIs, automation pipelines, and custom IT infrastructure built to fit your business.",
+    price: "Based on Scope",
+    features: [
+      "End-to-End System Architecture",
+      "API & Database Engineering",
+      "Internal Business Dashboards",
+      "Cloud Deployment & Maintenance"
+    ],
+    highlight: false,
+    colSpan: "md:col-span-1 lg:col-span-1",
+  },
+  {
+    id: "03",
+    title: "SaaS & MVP Engineering",
+    icon: <CodeXml className="w-6 h-6" />,
+    description: "Turn your startup idea into a fully functional, production-ready product in record time with robust database design and auth.",
+    price: "Based on Scope",
+    features: [
+      "Custom Full-Stack Application",
+      "User Auth, Database & Payments",
+      "Scalable Serverless Infrastructure",
+      "Rapid Turnaround to Launch"
+    ],
+    highlight: true,
+    colSpan: "md:col-span-1 lg:col-span-1",
+  },
+  {
+    id: "04",
     title: "Landing Pages",
     icon: <Rocket className="w-6 h-6" />,
     description: "High-conversion single pages designed to turn your visitors into customers.",
@@ -22,25 +67,25 @@ const PACKAGES = [
     colSpan: "md:col-span-1 lg:col-span-1",
   },
   {
-    id: "02",
-    title: "5-Page Website",
+    id: "05",
+    title: "Full-Stack Web App",
     icon: <LayoutTemplate className="w-6 h-6" />,
-    description: "A complete professional presence for your small business or agency.",
+    description: "A complete professional presence and web platform for your business, agency, or startup.",
     price: "From ₹5,000",
     features: [
-      "Up to 5 Custom Pages",
-      "SEO-Ready Structure",
-      "CMS Integration",
+      "Custom Responsive Pages",
+      "SEO-Ready Semantic Structure",
+      "CMS & Database Integration",
       "Contact & Analytics Setup"
     ],
-    highlight: true,
+    highlight: false,
     colSpan: "md:col-span-1 lg:col-span-1",
   },
   {
-    id: "03",
-    title: "Portfolio",
+    id: "06",
+    title: "Portfolio Website",
     icon: <Briefcase className="w-6 h-6" />,
-    description: "Showcase your work with stunning, smooth-scrolling animations.",
+    description: "Showcase your work and skills with stunning, smooth-scrolling animations and interactive design.",
     price: "From ₹5,000",
     features: [
       "Custom Animations using Framer Motion",
@@ -52,95 +97,50 @@ const PACKAGES = [
     colSpan: "md:col-span-1 lg:col-span-1",
   },
   {
-    id: "04",
-    title: "SaaS Website",
-    icon: <Cloud className="w-6 h-6" />,
-    description: "A digital storefront to sell your software, complete with pricing and feature showcases.",
-    price: "Based on Scope",
-    features: [
-      "Interactive Pricing Tables",
-      "Feature Tooltips & Demos",
-      "Authentication Page UI",
-      "Robust Performance Metrics"
-    ],
-    highlight: false,
-    colSpan: "md:col-span-1 lg:col-span-2",
-  },
-  {
-    id: "05",
-    title: "MVP Website",
-    icon: <CodeXml className="w-6 h-6" />,
-    description: "Launch your big startup idea faster with a fully functional Minimum Viable Product.",
-    price: "Based on Scope",
-    features: [
-      "Custom Web Application Logic",
-      "User Authentication & Payment Gateways",
-      "Database Setup & Architecture",
-      "Scalable Serverless Infrastructure"
-    ],
-    highlight: true,
-    colSpan: "md:col-span-2 lg:col-span-1",
-  },
-  {
-    id: "06",
-    title: "Website Redesign",
-    icon: <RefreshCcw className="w-6 h-6" />,
-    description: "Modernize your outdated site with a massive UI/UX & performance overhaul.",
-    price: "From ₹2,000",
-    features: [
-      "Complete Visual Overhaul",
-      "Seamless Content Migration",
-      "Core Web Vitals Improvement",
-      "Modern Tech Stack Upgrade"
-    ],
-    highlight: false,
-    colSpan: "md:col-span-1 lg:col-span-2",
-  },
-  {
     id: "07",
-    title: "Error Solving & Bugs",
-    icon: <Wrench className="w-6 h-6" />,
-    description: "Got bugs? Need performance tuning? We diagnose and fix codebase issues.",
-    price: "Based on Complexity",
+    title: "E-Commerce & Storefronts",
+    icon: <ShoppingCart className="w-6 h-6" />,
+    description: "A custom online store or Shopify platform with inventory management, cart, and payment integration.",
+    price: "From ₹5,000",
     features: [
-      "Architecture Consulting",
-      "Performance Optimization",
-      "Dependency Upgrades",
-      "Emergency Bug Squashing"
+      "Custom Storefront or Shopify Theme",
+      "Product & Inventory Management",
+      "Secure Payment Gateways",
+      "Advanced SEO & Analytics"
     ],
     highlight: false,
-    colSpan: "md:col-span-2 lg:col-span-1",
+    colSpan: "md:col-span-1 lg:col-span-1",
   },
   {
     id: "08",
-    title: "Shopify Website",
-    icon: <ShoppingBag className="w-6 h-6" />,
-    description: "Launch your online store on Shopify with a custom theme and seamless checkout.",
-    price: "From \u20b95,000",
+    title: "Website & App Redesign",
+    icon: <RefreshCcw className="w-6 h-6" />,
+    description: "Modernize your outdated software or site with a massive UI/UX, performance, and architecture overhaul.",
+    price: "Based on Scope",
     features: [
-      "Custom Shopify Theme",
-      "Product & Collection Setup",
-      "Payment & Shipping Config",
-      "Mobile-Optimized Storefront"
+      "Complete Visual & UX Overhaul",
+      "Seamless Data & Content Migration",
+      "Core Web Vitals Improvement",
+      "Modern Tech Stack Upgrade"
     ],
     highlight: false,
     colSpan: "md:col-span-1 lg:col-span-1",
   },
   {
     id: "09",
-    title: "E-Commerce Website",
-    icon: <ShoppingCart className="w-6 h-6" />,
-    description: "A fully custom e-commerce platform with inventory management and payment integration.",
-    price: "From \u20b95,000",
+    title: "Codebase Debugging & Bug Fixes",
+    icon: <Wrench className="w-6 h-6" />,
+    description: "Got stubborn bugs? Performance bottlenecks? I diagnose, refactor, and fix codebase issues rapidly.",
+    price: "Hourly / Fixed",
     features: [
-      "Custom Storefront Design",
-      "Inventory & Order Management",
-      "Secure Payment Gateways",
-      "Advanced SEO & Analytics"
+      "Architecture & Code Audit",
+      "Performance Optimization",
+      "Dependency & Breaking Changes Fixes",
+      "Emergency Bug Squashing"
     ],
-    highlight: true,
+    highlight: false,
     colSpan: "md:col-span-1 lg:col-span-1",
-  }
+  },
 ];
 
 export default function PackagesSection() {
@@ -159,7 +159,7 @@ export default function PackagesSection() {
             PRICING & PLANS
           </span>
           <h2
-            className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] xl:text-[5vw] leading-[0.85] font-bold text-black dark:text-white uppercase tracking-normal m-0 transition-colors duration-300"
+            className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[8vw] lg:text-[6vw] xl:text-[5vw] leading-[0.85] font-bold text-black dark:text-white uppercase tracking-normal m-0 transition-colors duration-300"
             style={{ fontFamily: "var(--font-bebas-neue)" }}
           >
             NICHE <br className="hidden md:block"/> PACKAGES
@@ -180,7 +180,7 @@ export default function PackagesSection() {
               transition={{ duration: 0.6, delay: index * 0.05 }}
               whileHover={{ y: -5 }}
               className={cn(
-                "relative group flex flex-col p-6 md:p-8 rounded-[24px] overflow-hidden backdrop-blur-xl transition-all duration-500",
+                "relative group flex flex-col p-5 sm:p-6 md:p-8 rounded-[20px] sm:rounded-[24px] overflow-hidden backdrop-blur-xl transition-all duration-500",
                 pkg.colSpan,
                 pkg.highlight 
                   ? "bg-black/90 dark:bg-zinc-900/90 border border-black dark:border-white/10 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)]" 

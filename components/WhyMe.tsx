@@ -7,38 +7,41 @@ import { cn } from "@/lib/utils";
 const SERVICES = [
   {
     id: "01",
-    title: "Web Development",
+    title: "Full-Stack Software Development",
     description:
-      "Custom, high-performance websites built with modern frameworks to meet your unique business needs.",
+      "Custom software applications, IT platforms, scalable web apps, and enterprise solutions engineered from the ground up for any business need.",
     image:
       "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200",
   },
   {
     id: "02",
-    title: "SaaS Development",
-    description: "Feature-rich software as a service platforms with scalable architecture and custom UI.",
-    image:
-      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
-  },
-  {
-    id: "03",
-    title: "MVP Development",
+    title: "1-on-1 Tutoring & Vibe Coding",
     description:
-      "Turn your idea into a working product quickly with scalable and clean architecture.",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
-  },
-  {
-    id: "04",
-    title: "Backend Development",
-    description: "Robust APIs, database design, and server-side logic to power your applications securely.",
+      "Personalized mentorship covering vibe coding, modern AI developer tooling (Cursor, Claude, Copilot), Next.js, and shipping real software at 10x speed.",
     image:
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200",
   },
   {
+    id: "03",
+    title: "SaaS & MVP Engineering",
+    description:
+      "Turn startup ideas into production-ready software products in record time with robust database design, user auth, and scalable architecture.",
+    image:
+      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
+  },
+  {
+    id: "04",
+    title: "AI Integration & Automation",
+    description:
+      "Intelligent LLM integrations, conversational agents, WhatsApp automation, and custom internal tools to modernize business operations.",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+  },
+  {
     id: "05",
-    title: "Web Redesign",
-    description: "Revamp your outdated website with a fresh, modern look, improved performance, and better conversions.",
+    title: "Backend & IT Infrastructure",
+    description:
+      "Resilient APIs, microservices, cloud deployments, database schemas, and end-to-end IT architecture built for speed and security.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
   },
@@ -71,9 +74,9 @@ export default function WhyMe() {
   }, [activeIndex, isPaused, handleNext]);
 
   return (
-    <section className="w-full bg-zinc-50 dark:bg-black py-16 md:py-24 transition-colors duration-300" id="why-me">
+    <section className="w-full bg-zinc-50 dark:bg-black py-12 sm:py-16 md:py-24 transition-colors duration-300" id="why-me">
       <div className="w-full max-w-[1400px] px-4 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start w-full">
             
             {/* Left Column: Sticky Title */}
             <div className="lg:col-span-4 flex flex-col gap-2 lg:sticky lg:top-32">
@@ -81,13 +84,13 @@ export default function WhyMe() {
                 EXPERTISE
               </span>
               <h2
-                className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] xl:text-[5vw] leading-[0.85] font-bold text-black dark:text-white uppercase tracking-normal m-0 transition-colors duration-300"
+                className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[8vw] lg:text-[6vw] xl:text-[5vw] leading-[0.85] font-bold text-black dark:text-white uppercase tracking-normal m-0 transition-colors duration-300"
                 style={{ fontFamily: "var(--font-bebas-neue)" }}
               >
                 SERVICES
               </h2>
               <p className="mt-4 text-black/60 dark:text-white/60 font-mono text-xs sm:text-sm leading-relaxed max-w-sm transition-colors duration-300">
-               Delivering high-quality digital solutions tailored to elevate your brand and drive results.
+                Custom software development, IT solutions, and hands-on vibe coding mentorship to take your ideas from zero to production.
               </p>
             </div>
 
@@ -100,7 +103,7 @@ export default function WhyMe() {
                     key={service.id}
                     onClick={() => handleTabClick(index)}
                     className={cn(
-                      "group relative flex items-start pl-6 md:pl-8 gap-4 py-8 md:py-10 text-left transition-all duration-500 border-t border-black/10 dark:border-white/10 first:border-t-0 hover:bg-black/5 dark:hover:bg-white/5",
+                      "group relative flex items-start pl-4 sm:pl-6 md:pl-8 gap-3 sm:gap-4 py-5 sm:py-7 md:py-10 text-left transition-all duration-500 border-t border-black/10 dark:border-white/10 first:border-t-0 hover:bg-black/5 dark:hover:bg-white/5",
                       isActive
                         ? "text-black dark:text-white"
                         : "text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white"
@@ -130,7 +133,7 @@ export default function WhyMe() {
                     <div className="flex flex-col gap-2 flex-1 pt-1">
                       <span
                         className={cn(
-                          "text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-normal font-bold uppercase transition-all duration-500",
+                          "text-2xl min-[380px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-normal font-bold uppercase transition-all duration-500 leading-tight",
                           isActive ? "text-black dark:text-white" : "group-hover:text-red-500"
                         )}
                         style={{ fontFamily: 'var(--font-bebas-neue)' }}

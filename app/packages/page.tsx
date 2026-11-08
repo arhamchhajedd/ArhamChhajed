@@ -5,9 +5,25 @@ import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
 import PackagesSection from "@/components/PackagesSection";
 
-export const metadata = {
-  title: "Packages | Arham Chhajed",
-  description: "Web development packages tailored for businesses and startups.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Packages & Services",
+  description: "Software engineering, custom IT development, and 1-on-1 vibe coding tutoring packages tailored for founders, businesses, and learners.",
+  alternates: {
+    canonical: "/packages",
+  },
+  openGraph: {
+    title: "Packages & Services | Arham Chhajed",
+    description: "Software engineering, custom IT development, and 1-on-1 vibe coding tutoring packages tailored for founders, businesses, and learners.",
+    url: "/packages",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packages & Services | Arham Chhajed",
+    description: "Software engineering, custom IT development, and 1-on-1 vibe coding tutoring packages tailored for founders, businesses, and learners.",
+  },
 };
 
 export default function PackagesPage() {

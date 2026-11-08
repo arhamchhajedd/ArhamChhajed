@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { projects } from "@/lib/projects";
 import LazyVideo from "@/components/LazyVideo";
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 
@@ -16,13 +16,16 @@ export default function Projects() {
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   return (
     <section 
       id="portfolio" 
-      className={`w-full flex flex-col items-center px-4 py-24 relative overflow-hidden bg-zinc-50 dark:bg-black transition-colors duration-300 ${isHovered ? "!cursor-none" : ""}`}
+      className={`w-full flex flex-col items-center px-4 py-16 sm:py-24 relative overflow-hidden bg-zinc-50 dark:bg-black transition-colors duration-300 ${isHovered ? "md:!cursor-none" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={(e) => {
@@ -30,12 +33,12 @@ export default function Projects() {
         cursorY.set(e.clientY - 40);
       }}
     >
-      {/* Custom Cursor (Portaled to body to escape overflow: hidden) */}
+      {/* Custom Cursor (Portaled to body to escape overflow: hidden, desktop only) */}
       {mounted && createPortal(
         <AnimatePresence>
           {isHovered && (
             <motion.div
-              className="fixed top-0 left-0 w-[80px] h-[80px] rounded-full flex items-center justify-center pointer-events-none z-[99999] backdrop-blur-md bg-white/30 dark:bg-black/30 border border-white/20 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+              className="hidden md:flex fixed top-0 left-0 w-[80px] h-[80px] rounded-full items-center justify-center pointer-events-none z-[99999] backdrop-blur-md bg-white/30 dark:bg-black/30 border border-white/20 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
               style={{
                 x: cursorXSpring,
                 y: cursorYSpring,
@@ -68,9 +71,9 @@ export default function Projects() {
       <div className="max-w-[1400px] w-full mx-auto">
         
         {/* Header */}
-        <div className="flex justify-between items-end mb-16 relative">
+        <div className="flex justify-between items-end mb-10 sm:mb-16 relative">
           <div className="relative inline-block">
-            <h2 className="text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
+            <h2 className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
                 style={{ fontFamily: 'var(--font-bebas-neue)' }}>
               SELECTED WORK
             </h2>
@@ -83,8 +86,8 @@ export default function Projects() {
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          {projects.map((project, index) => {
-            const cardClasses = `relative h-[60vh] md:h-[70vh] group overflow-hidden rounded-2xl transition-colors ${project.cols} ${!project.bgColor ? "bg-zinc-200 dark:bg-zinc-900" : ""} ${isHovered ? "!cursor-none" : ""}`;
+          {projects.map((project) => {
+            const cardClasses = `relative h-[52vh] min-h-[380px] sm:h-[60vh] md:h-[70vh] group overflow-hidden rounded-2xl transition-colors ${project.cols} ${!project.bgColor ? "bg-zinc-200 dark:bg-zinc-900" : ""} ${isHovered ? "md:!cursor-none" : ""}`;
 
             const cardContent = (
               <>
@@ -111,7 +114,7 @@ export default function Projects() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-100 md:opacity-90 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10" />
 
-                <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full flex justify-between items-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:transition-all md:duration-700 md:ease-out z-20">
+                <div className="absolute bottom-0 left-0 p-5 sm:p-6 md:p-8 w-full flex justify-between items-end gap-3 translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:transition-all md:duration-700 md:ease-out z-20">
                   <div className="max-w-xl">
                     <h3 className="text-2xl md:text-5xl font-bold text-white uppercase tracking-tight md:transition-colors md:duration-300 md:group-hover:text-red-500"
                         style={{ fontFamily: 'var(--font-bebas-neue)' }}>

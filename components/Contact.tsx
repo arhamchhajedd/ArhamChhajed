@@ -5,11 +5,12 @@ import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const serviceOptions = [
-  { value: "Web Development", label: "Web Development" },
-  { value: "Landing Page", label: "Landing Page" },
-  { value: "Ecommerce Development", label: "Ecommerce Development" },
-  { value: "Startup MVP", label: "Startup MVP" },
-  { value: "Other", label: "Other" },
+  { value: "Custom Software & IT Solutions", label: "Custom Software & IT Solutions" },
+  { value: "1-on-1 Tutoring & Vibe Coding", label: "1-on-1 Tutoring & Vibe Coding" },
+  { value: "SaaS & MVP Engineering", label: "SaaS & MVP Engineering" },
+  { value: "Web & Mobile App Development", label: "Web & Mobile App Development" },
+  { value: "AI Integration & Automation", label: "AI Integration & Automation" },
+  { value: "Other IT Solution", label: "Other IT Solution" },
 ];
 
 export default function Contact() {
@@ -55,7 +56,7 @@ export default function Contact() {
   const selectedLabel = serviceOptions.find((o) => o.value === selected)?.label;
 
   return (
-    <section id="contact" className="w-full bg-zinc-50 dark:bg-black transition-colors duration-300 p-4 md:p-[25px]">
+    <section id="contact" className="w-full bg-zinc-50 dark:bg-black transition-colors duration-300 p-3 sm:p-4 md:p-[25px]">
       {/* Inner Container with 5px gap from viewport edges implicitly via section padding */}
       <div className="w-full relative h-auto md:min-h-[800px] md:h-[850px] rounded-[18px] overflow-hidden bg-transparent md:bg-zinc-200 md:dark:bg-zinc-900 md:border md:border-black/10 md:dark:border-white/10 transition-colors duration-300">
 
@@ -72,14 +73,14 @@ export default function Contact() {
         </div>
 
         {/* Glass Panel Form */}
-        <div className="relative md:absolute md:top-[280px] right-0 bottom-0 w-full md:w-[480px] lg:w-[35%] bg-zinc-100 dark:bg-[#1a1a1a] md:bg-white/40 md:dark:bg-[#32322d]/40 md:backdrop-blur-[24px] border border-black/10 dark:border-white/10 md:border-t md:border-l md:border-b-0 md:border-r-0 shadow-lg md:shadow-[-10px_-10px_30px_rgba(0,0,0,0.1)] md:dark:shadow-[-10px_-10px_30px_rgba(0,0,0,0.2)] p-6 md:p-[40px] flex flex-col justify-center rounded-[18px] md:rounded-l-[18px] md:rounded-tr-none md:rounded-br-[18px] z-10 transition-all duration-500 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 md:hover:bg-white/60 md:dark:hover:bg-[#32322d]/30">
+        <div className="relative md:absolute md:top-[280px] right-0 bottom-0 w-full md:w-[480px] lg:w-[35%] bg-zinc-100 dark:bg-[#1a1a1a] md:bg-white/40 md:dark:bg-[#32322d]/40 md:backdrop-blur-[24px] border border-black/10 dark:border-white/10 md:border-t md:border-l md:border-b-0 md:border-r-0 shadow-lg md:shadow-[-10px_-10px_30px_rgba(0,0,0,0.1)] md:dark:shadow-[-10px_-10px_30px_rgba(0,0,0,0.2)] p-5 sm:p-7 md:p-[40px] flex flex-col justify-center rounded-[18px] md:rounded-l-[18px] md:rounded-tr-none md:rounded-br-[18px] z-10 transition-all duration-500 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 md:hover:bg-white/60 md:dark:hover:bg-[#32322d]/30">
 
-          <h2 className="text-black dark:text-white font-bold uppercase tracking-[1px] m-0 mb-[10px] text-3xl md:text-[32px] leading-tight transition-colors duration-300"
+          <h2 className="text-black dark:text-white font-bold uppercase tracking-[1px] m-0 mb-[10px] text-2xl min-[380px]:text-3xl md:text-[32px] leading-tight transition-colors duration-300"
               style={{ fontFamily: 'var(--font-bebas-neue)' }}>
             LET&apos;S WORK TOGETHER
           </h2>
-          <p className="text-black/60 dark:text-[#aaa] text-sm mb-[30px] transition-colors duration-300">
-            Drop me an email at <a href="mailto:arhamchhajed@gmail.com" className="text-black dark:text-white hover:underline transition-colors">arhamchhajed@gmail.com</a> or leave a message below.
+          <p className="text-black/60 dark:text-[#aaa] text-xs sm:text-sm mb-6 sm:mb-[30px] transition-colors duration-300">
+            Have a software project, need IT solutions, or want 1-on-1 vibe coding tutoring? Email me at <a href="mailto:arham@undesk.in" className="text-black dark:text-white hover:underline transition-colors font-medium break-all sm:break-normal">arham@undesk.in</a> or send a message below.
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col grow justify-center text-sm">

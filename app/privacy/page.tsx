@@ -4,16 +4,32 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
 
-export const metadata = {
-  title: "Privacy Policy | WorkRed Studio",
-  description: "Privacy policy of WorkRed Studio explaining how we collect, use, store, and protect your personal information.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy policy of Arham Chhajed explaining how personal information is collected, used, stored, and protected.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Arham Chhajed",
+    description: "Privacy policy of Arham Chhajed explaining how personal information is collected, used, stored, and protected.",
+    url: "/privacy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Arham Chhajed",
+    description: "Privacy policy of Arham Chhajed explaining how personal information is collected, used, stored, and protected.",
+  },
 };
 
 const sections = [
   {
     title: "1. Introduction",
     content:
-      "WorkRed Studio (\"WorkRed,\" \"we,\" \"us,\" or \"our\") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, store, share, and safeguard your data when you visit our website, engage our services, or communicate with us through any channel including WhatsApp, email, or our contact form. By using our website or engaging our services, you consent to the practices described in this policy.",
+      "Arham Chhajed (\"I,\" \"me,\" or \"my\") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how I collect, use, store, share, and safeguard your data when you visit my website, engage my custom software, development, or tutoring services, or communicate with me through any channel including WhatsApp, email, or my contact form. By using my website or engaging my services, you consent to the practices described in this policy.",
   },
   {
     title: "2. Information We Collect",
@@ -38,7 +54,7 @@ const sections = [
   {
     title: "6. Data Sharing and Third Parties",
     content:
-      "We do not sell, rent, or trade your personal information to any third party for marketing or commercial purposes. We may share your information only in the following limited circumstances: with trusted service providers and tools that assist us in operating our business, such as hosting providers, analytics services, payment processors, and communication platforms; with professional advisors such as accountants or legal counsel when necessary; when required to comply with a legal obligation, court order, or governmental request; and to protect the rights, property, or safety of WorkRed Studio, our clients, or the public. All third-party service providers we work with are contractually required to handle your data responsibly and in accordance with applicable privacy laws.",
+      "We do not sell, rent, or trade your personal information to any third party for marketing or commercial purposes. We may share your information only in the following limited circumstances: with trusted service providers and tools that assist us in operating our business, such as hosting providers, analytics services, payment processors, and communication platforms; with professional advisors such as accountants or legal counsel when necessary; when required to comply with a legal obligation, court order, or governmental request; and to protect the rights, property, or safety of Arham Chhajed, clients, or the public. All third-party service providers we work with are contractually required to handle your data responsibly and in accordance with applicable privacy laws.",
   },
   {
     title: "7. Data Security",
@@ -58,7 +74,7 @@ const sections = [
   {
     title: "10. Third-Party Links",
     content:
-      "Our website may contain links to third-party websites, platforms, and services, including but not limited to social media profiles, payment gateways, hosting providers, and client project websites. These third-party sites operate independently and have their own privacy policies and terms of service. WorkRed Studio is not responsible for the privacy practices, content, or security of any third-party websites. We strongly encourage you to review the privacy policies of any external sites before providing them with your personal information.",
+      "Our website may contain links to third-party websites, platforms, and services, including but not limited to social media profiles, payment gateways, hosting providers, and client project websites. These third-party sites operate independently and have their own privacy policies and terms of service. Arham Chhajed is not responsible for the privacy practices, content, or security of any third-party websites. We strongly encourage you to review the privacy policies of any external sites before providing them with your personal information.",
   },
   {
     title: "11. Children's Privacy",
@@ -68,7 +84,7 @@ const sections = [
   {
     title: "12. International Data Considerations",
     content:
-      "WorkRed Studio is based in India and primarily serves clients within India and internationally. If you are accessing our website or engaging our services from outside India, please be aware that your information may be transferred to, stored, and processed in India. By using our services, you consent to the transfer of your information to India and acknowledge that data protection laws in India may differ from those in your jurisdiction.",
+      "Arham Chhajed is based in India and primarily serves clients within India and internationally. If you are accessing our website or engaging our services from outside India, please be aware that your information may be transferred to, stored, and processed in India. By using our services, you consent to the transfer of your information to India and acknowledge that data protection laws in India may differ from those in your jurisdiction.",
   },
   {
     title: "13. Changes to This Privacy Policy",
@@ -78,7 +94,7 @@ const sections = [
   {
     title: "14. Contact Us",
     content:
-      "If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us via WhatsApp at +91 7410030558 or through the contact form on our website at workred.studio. You may also reach out to us via email for formal privacy-related requests. We aim to acknowledge all inquiries within 24 hours and provide a substantive response within 7 business days.",
+      "If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us via WhatsApp at +91 7410030558 or through the contact form on this website. You may also reach out via email at arham@undesk.in for formal privacy-related requests. We aim to acknowledge all inquiries within 24 hours and provide a substantive response within 7 business days.",
   },
 ];
 
@@ -103,7 +119,7 @@ export default function PrivacyPage() {
                 <div className="flex justify-between items-end mb-16 relative">
                   <div className="relative inline-block">
                     <h1
-                      className="text-[10vw] sm:text-[8vw] md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
+                      className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
                       style={{ fontFamily: "var(--font-bebas-neue)" }}
                     >
                       Privacy<br />Policy

@@ -22,7 +22,7 @@ export default function Home() {
         <Reveal delay={100}><WhyMe /></Reveal>
         <Reveal delay={100}><Projects /></Reveal>
         <Reveal delay={100}><FAQSection /></Reveal>
-        {/* <Reveal delay={100}><Testimonials /></Reveal> */}
+        <Reveal delay={100}><Testimonials /></Reveal>
         <Reveal delay={100}><Contact /></Reveal>
         <Reveal delay={100}><Footer /></Reveal>
       </main>

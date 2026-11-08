@@ -27,7 +27,7 @@ export default function LogoStrip() {
           <div className="relative mt-2 flex flex-col items-center lg:items-start w-full">
             <h2
               aria-hidden
-              className="text-5xl sm:text-6xl lg:text-7xl leading-none font-bold text-black dark:text-white uppercase tracking-tight opacity-0 pointer-events-none select-none transition-colors duration-300 text-center lg:text-left"
+              className="text-4xl min-[380px]:text-5xl sm:text-6xl lg:text-7xl leading-none font-bold text-black dark:text-white uppercase tracking-tight opacity-0 pointer-events-none select-none transition-colors duration-300 text-center lg:text-left"
               style={{ fontFamily: 'var(--font-bebas-neue)' }}
             >
               TRUSTED BY
@@ -40,7 +40,7 @@ export default function LogoStrip() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -15, opacity: 0 }}
                   transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="text-5xl sm:text-6xl lg:text-7xl leading-none font-bold text-black dark:text-white uppercase tracking-tight whitespace-nowrap text-center lg:text-left w-full"
+                  className="text-4xl min-[380px]:text-5xl sm:text-6xl lg:text-7xl leading-none font-bold text-black dark:text-white uppercase tracking-tight whitespace-nowrap text-center lg:text-left w-full"
                   style={{ fontFamily: 'var(--font-bebas-neue)' }}
                 >
                   {activeBrand?.name ?? 'TRUSTED BY'}
@@ -51,7 +51,7 @@ export default function LogoStrip() {
         </div>
 
         {/* Right: icon grid */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 sm:gap-4 w-full lg:w-auto mt-1 lg:mt-0">
+        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-2.5 sm:gap-4 w-full lg:w-auto mt-1 lg:mt-0">
           {brands.map(({ id, name, src }) => {
             const isActive = hoveredId === id;
             const isDimmed = hoveredId !== null && !isActive;
@@ -60,7 +60,7 @@ export default function LogoStrip() {
                 key={id}
                 aria-label={name}
                 className={[
-                  'flex items-center justify-center p-4 sm:p-5 transition-all duration-300',
+                  'flex items-center justify-center p-2.5 sm:p-4 md:p-5 transition-all duration-300',
                   isActive ? 'scale-105' : '',
                   isDimmed ? 'opacity-20' : 'opacity-70',
                 ].join(' ')}
@@ -68,7 +68,7 @@ export default function LogoStrip() {
                 onMouseLeave={() => setHoveredId(null)}
                 style={{ filter: 'brightness(0) invert(0.5)' }}
               >
-                <Image src={src} alt={name} width={120} height={45} className="object-contain" />
+                <Image src={src} alt={name} width={120} height={45} className="object-contain h-7 sm:h-9 w-auto max-w-[90px] sm:max-w-none" />
               </button>
             );
           })}

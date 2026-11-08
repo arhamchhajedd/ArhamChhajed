@@ -57,7 +57,7 @@ const Skiper30 = () => {
     <main className="w-full bg-transparent overflow-hidden">
       <div
         ref={gallery}
-        className="relative box-border flex h-[250vh] md:h-[150vh] gap-[3vw] md:gap-[2vw] overflow-hidden bg-transparent pt-[10vh] md:p-[2vw] justify-center"
+        className="relative box-border flex h-[120vh] sm:h-[135vh] md:h-[150vh] gap-[3vw] md:gap-[2vw] overflow-hidden bg-transparent pt-4 sm:pt-[5vh] md:p-[2vw] justify-center"
       >
         <Column images={[images[0], images[1], images[2]]} y={y} className="hidden md:flex top-[-45%]" />
         
@@ -105,7 +105,7 @@ const Column = ({ images, y, className = "" }: ColumnProps) => {
           <div key={i} className={`relative h-full w-full overflow-hidden rounded-2xl ${itemClass}`}>
             <Image
               src={src}
-              alt="image"
+              alt={`Portfolio showcase item ${i + 1} - Arham Chhajed`}
               fill
               className="pointer-events-none object-cover object-top"
             />

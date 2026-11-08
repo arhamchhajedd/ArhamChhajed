@@ -16,6 +16,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               {[
                 { label: "WORK", href: "#portfolio" },
+                { label: "CLIENTS", href: "/#testimonials" },
                 { label: "FAQ", href: "/faq" },
               ].map((link) => (
                 <Link
@@ -55,7 +56,7 @@ export default function Footer() {
             </span>
             <a
               href="mailto:arham@undesk.in"
-              className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight hover:text-red-500 transition-colors duration-500 break-all md:break-normal"
+              className="text-white text-xl min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight hover:text-red-500 transition-colors duration-500 break-all md:break-normal"
               style={{ fontFamily: "var(--font-geist-sans)" }}
             >
               arham@undesk.in
@@ -69,7 +70,7 @@ export default function Footer() {
           {/* Left: Giant Red Name */}
           <div className="md:col-span-7">
             <h2
-              className="text-[18vw] sm:text-[14vw] md:text-[10vw] lg:text-[9vw] leading-[0.85] font-bold text-red-500 uppercase tracking-tight m-0 select-none"
+              className="text-5xl min-[380px]:text-6xl sm:text-7xl md:text-[10vw] lg:text-[9vw] leading-[0.85] font-bold text-red-500 uppercase tracking-tight m-0 select-none break-words"
               style={{ fontFamily: "var(--font-bebas-neue)" }}
             >
               ARHAM CHHAJED.
@@ -78,10 +79,10 @@ export default function Footer() {
 
           {/* Right: Service categories in italic serif */}
           <div className="md:col-span-5 flex flex-col items-start md:items-end gap-1 md:pb-4">
-            {["Web Development", "Freelance", "Applications"].map((service) => (
+            {["Software Engineering", "Vibe Coding & Tutoring", "Custom IT Solutions"].map((service) => (
               <span
                 key={service}
-                className="text-white/50 text-2xl sm:text-3xl md:text-4xl italic tracking-tight"
+                className="text-white/50 text-xl min-[380px]:text-2xl sm:text-3xl md:text-4xl italic tracking-tight"
                 style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
               >
                 {service}

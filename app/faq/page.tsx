@@ -5,9 +5,25 @@ import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata = {
-  title: "FAQ | Arham Chhajed",
-  description: "Frequently asked questions about Arham Chhajed's web development services.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions",
+  description: "Frequently asked questions about Arham Chhajed's custom software development, IT solutions, and 1-on-1 vibe coding mentorship.",
+  alternates: {
+    canonical: "/faq",
+  },
+  openGraph: {
+    title: "FAQ | Arham Chhajed",
+    description: "Frequently asked questions about Arham Chhajed's custom software development, IT solutions, and 1-on-1 vibe coding mentorship.",
+    url: "/faq",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Arham Chhajed",
+    description: "Frequently asked questions about Arham Chhajed's custom software development, IT solutions, and 1-on-1 vibe coding mentorship.",
+  },
 };
 
 export default function FAQPage() {

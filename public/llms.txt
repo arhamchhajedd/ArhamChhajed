@@ -1,54 +1,53 @@
-# WorkRed Studio
+# Arham Chhajed
 
-> WorkRed Studio is a premium web agency specializing in building fast, modern, and impactful digital experiences for businesses and startups.
+> Arham Chhajed is a Full Stack Developer & Tech Mentor based in India. He builds custom software, scalable IT systems, SaaS MVPs, and provides 1-on-1 tutoring in modern vibe coding workflows.
 
 ## About
-- Agency: WorkRed Studio
-- Founders: Vedant Mahind (Founder) & Arham Chhajed (Co-Founder)
-- Roles: Full-Stack Web Developers
+- Name: Arham Chhajed
+- Role: Full Stack Developer & Tech Mentor
 - Location: India
-- Website: https://workred.vercel.app
-- Tagline: We build websites that convert.
+- Portfolio: https://arhamchhajed.vercel.app
+- Tagline: Custom software engineering, IT solutions, and hands-on vibe coding mentorship.
+- Experience & Focus: Creator of Undesk (India-focused WhatsApp-first CRM), Founder of InterJob (freelance and tutoring marketplace), pursuing diploma in AI.
 
-## Services
-- Landing Pages: High converting landing pages designed to maximize clicks, leads, and sales
-- 5-Page Website: Fast, mobile friendly websites built to generate leads and grow your business
-- Portfolio Website: Showcase your work with stunning animations and bespoke editorial layouts
-- SaaS Website: Feature rich marketing sites with pricing tables, demos, and auth UI
-- MVP Development: Turn your idea into a working product with scalable and clean architecture
-- Website Redesign: Improve your existing website with better design, speed, and user experience
-- Shopify Website: Custom Shopify themes with product setup, payments, and shipping config
-- E-Commerce Website: Build custom stores with smooth checkout, inventory, and payment integration
-- Error Solving & Bugs: Diagnose and fix codebase issues, performance problems, and dependency upgrades
-- Maintenance & Support: Ongoing website updates, security patches, backups, and performance monitoring
+## Core Capabilities & Services
+- Custom Software Development: End-to-end bespoke software engineering, enterprise IT applications, internal dashboards, and scalable tools across the tech stack.
+- 1-on-1 Tutoring & Vibe Coding Mentorship: Hands-on coaching in vibe coding, modern AI developer tooling (Cursor, Claude, Copilot), Next.js, full-stack architecture, and shipping real products at 10x speed.
+- SaaS & MVP Development: Fast-turnaround minimum viable products with clean database architecture, auth, payments, and modern UI/UX.
+- Full-Stack Web Applications: Fast, production-ready web apps built with Next.js, React, TypeScript, and modern APIs.
+- AI Integration & Automation: Intelligent LLM agents, automated WhatsApp workflows, and internal tooling to modernize business processes.
+- Backend & IT Infrastructure: Robust APIs, microservices, cloud deployments, database modeling, and server-side architecture.
+- Codebase Optimization & Bug Fixing: Performance tuning, architectural refactoring, legacy codebase modernization, and emergency debugging.
 
-## Projects
-- InterJob (https://interjob.in): An India focused tutoring and freelance marketplace built to rethink commissions, payments, and access for businesses, students, and independent professionals in India. [Professional Work]
-- Hospital Finder (https://hospitalfinderbyarham.vercel.app): A real world hospital finder built with Next.js and OpenStreetMap — fast, map driven, and designed for practical, city wide healthcare discovery. [Personal Project]
-- Rishabh's Portfolio (https://rmaniac.vercel.app): A creative model portfolio bringing emotion, precision, and style to every frame. [Creative Model]
-- InterMeet (https://intermeet-arham.vercel.app): Production ready, open source video conferencing platform built with Next.js, LiveKit, and Supabase. [Video Conferencing]
-- Real Time Chat System (https://realtimechatbyarham.vercel.app/signup): Production ready messaging system with real architecture, real data models, and real time messaging. [Personal Project]
+## Key Projects
+- Undesk (https://www.undesk.in): Collaborative workspace and CRM built specifically for Indian businesses and freelancers with WhatsApp-first workflows.
+- InterJob (https://interjob.in): India-focused tutoring and freelance marketplace built to rethink commissions, payments, and access for independent professionals and students.
+- Hospital Finder (https://hospitalfinderbyarham.vercel.app): Map-driven healthcare discovery web application built with Next.js and OpenStreetMap.
+- Real-Time Chat System (https://realtimechatbyarham.vercel.app/signup): Production-ready messaging platform with real data models and real-time communication built with Next.js and Supabase.
+- Rishabh's Portfolio (https://rmaniac.vercel.app): Creative high-fashion model portfolio featuring fluid animations and editorial layouts.
 
 ## Pages
-- Home: https://workred.vercel.app
-- Projects: https://workred.vercel.app/projects
-- Packages: https://workred.vercel.app/packages
-- FAQ: https://workred.vercel.app/faq
-- Terms & Conditions: https://workred.vercel.app/terms
-- Privacy Policy: https://workred.vercel.app/privacy
+- Home: https://arhamchhajed.vercel.app
+- Projects: https://arhamchhajed.vercel.app/projects
+- Packages & Pricing: https://arhamchhajed.vercel.app/packages
+- FAQ: https://arhamchhajed.vercel.app/faq
+- Terms & Conditions: https://arhamchhajed.vercel.app/terms
+- Privacy Policy: https://arhamchhajed.vercel.app/privacy
 
-## Tech Stack
-- Frontend: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
-- Backend: Supabase, LiveKit
-- Hosting: Vercel
+## Tech Stack & Skills
+- Languages: TypeScript, JavaScript, Python, SQL, HTML5, CSS3
+- Frontend: Next.js (App Router), React 19, Tailwind CSS v4, Framer Motion, Motion, Lenis
+- Backend & Cloud: Node.js, Next.js Server Actions, Supabase, PostgreSQL, REST/GraphQL APIs, Serverless, Vercel
+- AI & Vibe Coding Tooling: Cursor, Claude, OpenAI APIs, AI Agent Workflows, Prompt Engineering
+- Tools & DevOps: Git, GitHub, Postman, Docker, Edge Functions
 
-## Contact
+## Contact & Links
+- Email: Arham@undesk.in
 - WhatsApp: +91 7410030558
-- Email: workredstudio@gmail.com
-- Instagram: https://www.instagram.com/workred.studio
+- GitHub: https://github.com/ArhamChhajedd
+- LinkedIn: https://www.linkedin.com/in/arhamchhajed
+- Instagram: https://www.instagram.com/v5arham
 
-## Sitemap
-- XML: https://workred.vercel.app/sitemap.xml
-
-## Robots
-- https://workred.vercel.app/robots.txt
+## Sitemap & Crawling
+- Sitemap: https://arhamchhajed.vercel.app/sitemap.xml
+- Robots: https://arhamchhajed.vercel.app/robots.txt

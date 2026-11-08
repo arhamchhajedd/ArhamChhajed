@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Home, User, Briefcase, Wrench, Star, HelpCircle, Mail, X } from "lucide-react";
+import { ArrowUpRight, Home, User, Briefcase, Wrench, HelpCircle, Star, Mail, X } from "lucide-react";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -42,8 +42,8 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
     { label: "About", id: "about", Icon: User },
     { label: "Services", id: "why-me", Icon: Wrench },
     { label: "Work", id: "portfolio", Icon: Briefcase },
+    { label: "Clients", id: "testimonials", Icon: Star },
     { label: "FAQ", id: "faqs", Icon: HelpCircle },
-    // { label: "Clients", id: "testimonials", Icon: Star },
     { label: "Contact", id: "contact", Icon: Mail }
   ];
 
@@ -61,7 +61,7 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
   return (
     <>
       {/* Desktop Dynamic Floating Navigation Pill */}
-      <div className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 w-full max-w-[1000px] px-2 sm:px-8 hidden sm:block ${
+      <div className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 w-full max-w-[1000px] px-2 sm:px-8 hidden md:block ${
         isScrolled ? "top-4" : "top-8"
       }`}>
         <nav className={`flex justify-between items-center text-[10px] sm:text-sm font-medium uppercase tracking-widest relative px-3 sm:px-4 py-2 sm:py-2.5 rounded-full transition-all duration-700 mx-auto w-fit gap-1 sm:gap-2 ${
@@ -104,16 +104,16 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
       </div>
 
       {/* Mobile Premium Header */}
-      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 sm:hidden ${
+      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 md:hidden ${
         isScrolled 
           ? "bg-white/90 dark:bg-black/90 backdrop-blur-2xl border-b border-black/5 dark:border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.05)] py-3" 
-          : "bg-gradient-to-b from-zinc-100/80 to-transparent dark:from-black/80 dark:to-transparent backdrop-blur-[2px] py-5"
+          : "bg-gradient-to-b from-zinc-100/80 to-transparent dark:from-black/80 dark:to-transparent backdrop-blur-[2px] py-4"
       }`}>
-        <div className="flex justify-between items-center px-5">
+        <div className="flex justify-between items-center px-4 sm:px-6">
           {/* Creative Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="group flex items-center gap-2.5"
+            className="group flex items-center gap-2"
           >
             <Image
               src="/apple-touch-icon.png"
@@ -121,10 +121,10 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
               width={98}
               height={98}
               priority
-              className="w-12 h-12 min-[400px]:w-[60px] min-[400px]:h-[60px] rounded transition-transform duration-500 group-active:scale-90"
+              className="w-10 h-10 min-[400px]:w-12 min-[400px]:h-12 rounded transition-transform duration-500 group-active:scale-90"
             />
             <span
-              className="text-2xl min-[380px]:text-[28px] min-[420px]:text-[32px] md:text-4xl leading-none font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-zinc-600 dark:from-white dark:to-zinc-400 tracking-wider transition-transform duration-500 group-active:scale-95 shrink-0"
+              className="text-2xl min-[380px]:text-[26px] min-[420px]:text-[28px] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-zinc-600 dark:from-white dark:to-zinc-400 tracking-wider transition-transform duration-500 group-active:scale-95 shrink-0"
               style={{ fontFamily: 'var(--font-bebas-neue)' }}
             >
               ARHAM<span className="text-red-500">.</span>
@@ -132,10 +132,10 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
           </button>
           
           {/* Creative Custom Controls */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
             <ThemeToggle />
             
-            <div className="w-[1px] h-5 bg-black/15 dark:bg-white/15 mx-1"></div>
+            <div className="w-[1px] h-5 bg-black/15 dark:bg-white/15 mx-0.5"></div>
             
             {/* Custom Staggered Hamburger Icon */}
             <button 
@@ -158,7 +158,7 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[100] bg-zinc-50 dark:bg-black sm:hidden flex flex-col"
+            className="fixed inset-0 z-[100] bg-zinc-50 dark:bg-black md:hidden flex flex-col overflow-y-auto"
           >
             <div className="flex justify-between items-center p-6 border-b border-black/10 dark:border-white/10">
               <span className="font-mono text-xs uppercase tracking-widest text-black/50 dark:text-white/50">Menu</span>
@@ -171,7 +171,7 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
               </button>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center px-8 gap-8">
+            <div className="flex-1 flex flex-col justify-center px-8 py-6 gap-6 sm:gap-8">
               {navItems.map((item, i) => (
                 <motion.button
                   key={item.label}
@@ -181,45 +181,43 @@ export default function Header({ showHero = true }: { showHero?: boolean }) {
                   }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * i }}
-                  className="text-4xl font-bold uppercase tracking-tight text-black dark:text-white hover:text-red-500 transition-colors flex items-center gap-4 text-left cursor-pointer"
+                  transition={{ delay: 0.05 * i }}
+                  className="text-3xl min-[380px]:text-4xl font-bold uppercase tracking-tight text-black dark:text-white hover:text-red-500 transition-colors flex items-center gap-4 text-left cursor-pointer"
                   style={{ fontFamily: 'var(--font-bebas-neue)' }}
                 >
-                  <item.Icon className="w-8 h-8 text-black/30 dark:text-white/30" />
+                  <item.Icon className="w-6 h-6 sm:w-8 sm:h-8 text-black/30 dark:text-white/30 shrink-0" />
                   {item.label}
                 </motion.button>
               ))}
             </div>
             
-            <div className="p-8 border-t border-black/10 dark:border-white/10">
-              <p className="font-mono text-[10px] text-black/40 dark:text-white/40 uppercase tracking-widest text-center">Arham Chhajed &copy; 2026</p>
+            <div className="p-6 border-t border-black/10 dark:border-white/10 mt-auto">
+              <p className="font-mono text-[10px] text-black/40 dark:text-white/40 uppercase tracking-widest text-center">Arham Chhajed &copy; {new Date().getFullYear()}</p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       {showHero && (
-        <header className="w-full flex flex-col items-center pt-32 pb-8 relative z-40">
+        <header className="w-full flex flex-col items-center pt-24 sm:pt-32 pb-6 sm:pb-8 relative z-40">
           <div className="flex flex-col items-center px-4 w-full max-w-[1400px]">
 
             {/* Top Info Grid */}
-            <div className="w-full grid grid-cols-3 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-black/50 dark:text-white/50 mb-12 max-w-[1400px] items-end">
+            <div className="w-full flex justify-between items-end gap-4 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-black/50 dark:text-white/50 mb-8 sm:mb-12 max-w-[1400px]">
               <span className="text-left leading-relaxed">
                 Based in<br />
                 <span className="text-black/80 dark:text-white/80">India</span>
               </span>
-              <span className="text-center font-bold text-black/30 dark:text-white/30">
-              </span>
               <span className="text-right leading-relaxed">
-                Web<br />
-                <span className="text-black/80 dark:text-white/80">Developer</span>
+                Full Stack Developer<br />
+                <span className="text-black/80 dark:text-white/80">& Tech Mentor</span>
               </span>
             </div>
 
-            <div className="relative flex justify-center items-center py-4 w-[100vw] sm:w-full cursor-default overflow-hidden group -mx-4 sm:mx-0">
+            <div className="relative flex justify-center items-center py-4 w-full cursor-default overflow-hidden group">
               {/* Cinematic Logo Text */}
               <h1
-                className="text-[14.5vw] sm:text-[12vw] leading-[0.85] font-bold text-transparent bg-clip-text bg-gradient-to-b from-black via-zinc-800 to-zinc-400 dark:from-white dark:via-white/90 dark:to-white/40 uppercase m-0 tracking-tight text-center whitespace-nowrap z-10 relative transition-all duration-500"
+                className="text-[13vw] sm:text-[12vw] leading-[0.85] font-bold text-transparent bg-clip-text bg-gradient-to-b from-black via-zinc-800 to-zinc-400 dark:from-white dark:via-white/90 dark:to-white/40 uppercase m-0 tracking-tight text-center whitespace-nowrap z-10 relative transition-all duration-500"
                 style={{ fontFamily: 'var(--font-bebas-neue)' }}
               >
                Arham Chhajed

@@ -9,7 +9,7 @@ import { motion, AnimatePresence, useScroll, useTransform, MotionValue } from "f
 const founders = [
   {
     name: "Arham Chhajed",
-    role: "Web Developer & Freelancer",
+    role: "Full Stack Developer & Tech Mentor",
     image: "/arham.png",
     imagePosition: "center center",
     linkedin: "https://www.linkedin.com/in/arhamchhajed",
@@ -71,7 +71,7 @@ function ImageLightbox({
         </svg>
       </button>
 
-      {/* Image — constrained to fit fully within viewport */}
+      {/* Image: constrained to fit fully within viewport */}
       <motion.div
         className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10"
         style={{ maxHeight: "calc(100vh - 6rem)", aspectRatio: "3/4" }}
@@ -213,7 +213,7 @@ export default function AboutIntro() {
         <div className="md:col-span-4 flex flex-col justify-between pt-4 sm:pt-8 md:pt-4 relative" ref={detailsRef}>
           <div className="text-black/70 dark:text-white/70 text-sm md:text-base leading-relaxed mb-8 sm:mb-12 transition-colors duration-300">
             <VariableProximity
-              label="I'm Arham Chhajed. I build software and I'm currently focused on Undesk, a CRM built entirely for Indian businesses and freelancers. I designed it with WhatsApp-first workflows because that's how client conversations actually happen here, instead of forcing tools built for US sales teams."
+              label="I'm Arham Chhajed. I develop custom software and full-stack digital systems across IT, from scalable web platforms to business applications. I'm currently focused on Undesk, a CRM built entirely for Indian businesses and freelancers with WhatsApp-first workflows, designed to replace generic tools with software that fits real-world operations."
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
               toFontVariationSettings="'wght' 1000, 'opsz' 40"
               containerRef={detailsRef}
@@ -222,7 +222,7 @@ export default function AboutIntro() {
               className="mb-8 block"
             /><br /><br />
             <VariableProximity
-              label="I also founded InterJob to help Indian freelancers who lose too much of their earnings to unfair commission structures. I'm currently doing a diploma in AI alongside this work, and I'm always happy to chat about startups, marketplace economics, or building tech for India."
+              label="I also founded InterJob, an India-focused tutoring and freelance marketplace designed to eliminate unfair commissions. I offer 1-on-1 tutoring and vibe coding mentorship, teaching how to build real-world software rapidly using AI tools, modern stacks, and sound engineering principles. With an ongoing diploma in AI, I can build anything in IT and software."
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
               toFontVariationSettings="'wght' 1000, 'opsz' 40"
               containerRef={detailsRef}
@@ -259,13 +259,13 @@ function ScrollRevealText() {
     offset: ["start 85%", "center center"],
   });
 
-  const textToReveal = "I build fast, modern websites and web apps for startups, businesses, and founders who want real results.";
+  const textToReveal = "I build custom software, web apps, and IT solutions, and mentor creators in vibe coding and modern engineering.";
   const words = textToReveal.split(" ");
 
   return (
     <div ref={container} className="mb-8 md:mb-0">
       <h2
-        className="text-[10vw] sm:text-[8vw] md:text-[5vw] xl:text-[4vw] leading-[1] md:leading-[1.1] font-bold uppercase tracking-normal flex flex-wrap"
+        className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[5vw] xl:text-[4vw] leading-[1] md:leading-[1.1] font-bold uppercase tracking-normal flex flex-wrap"
         style={{ fontFamily: "var(--font-bebas-neue)", columnGap: "0.25em" }}
       >
         {words.map((word, i) => {

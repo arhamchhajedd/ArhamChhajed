@@ -7,17 +7,38 @@ import PageTransition from "@/components/PageTransition";
 import LazyVideo from "@/components/LazyVideo";
 import { projects } from "@/lib/projects";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore custom software applications, SaaS products, full-stack systems, and client work engineered by Arham Chhajed.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: "Projects | Arham Chhajed",
+    description: "Explore custom software applications, SaaS products, full-stack systems, and client work engineered by Arham Chhajed.",
+    url: "/projects",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | Arham Chhajed",
+    description: "Explore custom software applications, SaaS products, full-stack systems, and client work engineered by Arham Chhajed.",
+  },
+};
+
 export default function ProjectsPage() {
   return (
     <PageTransition>
     <main className="min-h-screen">
       <Header showHero={false} />
 
-      <section className="w-full flex flex-col items-center px-4 pt-48 pb-24 relative overflow-hidden bg-zinc-50 dark:bg-black transition-colors duration-300">
+      <section className="w-full flex flex-col items-center px-4 pt-32 sm:pt-48 pb-16 sm:pb-24 relative overflow-hidden bg-zinc-50 dark:bg-black transition-colors duration-300">
         <div className="max-w-[1400px] w-full mx-auto">
 
           {/* Header */}
-          <div className="flex justify-between items-end mb-16 relative">
+          <div className="flex justify-between items-end mb-10 sm:mb-16 relative">
             <div className="flex flex-col gap-4">
               <Link
                 href="/"
@@ -27,7 +48,7 @@ export default function ProjectsPage() {
                 Back to Home
               </Link>
               <h1
-                className="text-[10vw] sm:text-[8vw] md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
+                className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
                 style={{ fontFamily: 'var(--font-bebas-neue)' }}
               >
                 ALL PROJECTS
@@ -42,7 +63,7 @@ export default function ProjectsPage() {
           {/* Project Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {projects.map((project) => {
-              const cardClasses = `relative h-[60vh] md:h-[70vh] group cursor-pointer overflow-hidden rounded-2xl transition-colors ${project.cols} ${!project.bgColor ? "bg-zinc-200 dark:bg-zinc-900" : ""}`;
+              const cardClasses = `relative h-[52vh] min-h-[380px] sm:h-[60vh] md:h-[70vh] group cursor-pointer overflow-hidden rounded-2xl transition-colors ${project.cols} ${!project.bgColor ? "bg-zinc-200 dark:bg-zinc-900" : ""}`;
 
               const cardContent = (
                 <>
@@ -69,7 +90,7 @@ export default function ProjectsPage() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-100 md:opacity-90 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10" />
 
-                  <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full flex justify-between items-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:transition-all md:duration-700 md:ease-out z-20">
+                  <div className="absolute bottom-0 left-0 p-5 sm:p-6 md:p-8 w-full flex justify-between items-end gap-3 translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:transition-all md:duration-700 md:ease-out z-20">
                     <div className="max-w-xl">
                       <h3
                         className="text-2xl md:text-5xl font-bold text-white uppercase tracking-tight md:transition-colors md:duration-300 md:group-hover:text-red-500"

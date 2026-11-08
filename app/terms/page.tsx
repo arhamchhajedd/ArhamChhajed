@@ -4,9 +4,25 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
 
-export const metadata = {
-  title: "Terms & Conditions | Arham Chhajed",
-  description: "Terms and conditions governing the use of Arham Chhajed's web development and freelance services.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "Terms and conditions governing the use of Arham Chhajed's software development, IT solutions, and vibe coding mentorship services.",
+  alternates: {
+    canonical: "/terms",
+  },
+  openGraph: {
+    title: "Terms & Conditions | Arham Chhajed",
+    description: "Terms and conditions governing the use of Arham Chhajed's software development, IT solutions, and vibe coding mentorship services.",
+    url: "/terms",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | Arham Chhajed",
+    description: "Terms and conditions governing the use of Arham Chhajed's software development, IT solutions, and vibe coding mentorship services.",
+  },
 };
 
 const sections = [
@@ -98,7 +114,7 @@ const sections = [
   {
     title: "18. Contact Information",
     content:
-      "For any questions, concerns, or clarifications regarding these Terms and Conditions, please reach out to me via email at arhamchhajed@gmail.com or through the contact form available on my website. I aim to respond to all inquiries within 24 to 48 business hours.",
+      "For any questions, concerns, or clarifications regarding these Terms and Conditions, please reach out to me via email at arham@undesk.in or through the contact form available on my website. I aim to respond to all inquiries within 24 to 48 business hours.",
   },
 ];
 
@@ -123,7 +139,7 @@ export default function TermsPage() {
                 <div className="flex justify-between items-end mb-16 relative">
                   <div className="relative inline-block">
                     <h1
-                      className="text-[10vw] sm:text-[8vw] md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
+                      className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-[6vw] leading-none font-bold text-black dark:text-white uppercase tracking-tight m-0 transition-colors duration-300"
                       style={{ fontFamily: "var(--font-bebas-neue)" }}
                     >
                       Terms &<br />Conditions
